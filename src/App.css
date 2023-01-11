@@ -1,0 +1,15 @@
+ @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Heebo&family=Nunito&display=swap');
+
+ /* font-family: 'Alfa Slab One', cursive;
+font-family: 'Heebo', sans-serif;
+font-family: 'Nunito', sans-serif; */
+
+ #root {
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+ }
+
+ .navbar-nav>a {
+   font-family: 'Nunito', sans-serif;
+ }
