@@ -1,26 +1,31 @@
 
-const Features = () => {
+const Features = (): JSX.Element => {
+    const handleMouseOver = (event: React.MouseEvent<HTMLDivElement>) => {
+        const target = event.target as HTMLImageElement;
+        let src: any = target.getAttribute('src')
+        target.setAttribute('src', src)
+    }
     return (
         <div className="container border-top pt-5">
             <h2 className="display-6 pb-2">Perks and Features</h2>
             <a href="https://storyset.com/online" className="text-dark">Online illustrations by Storyset</a>
             <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 <div className="feature-col">
-                    <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" onMouseOver={handleMouseOver}>
                         <img src="/Report.gif" className="img-fluid" alt="" />
                     </div>
                     <h4>Inventory Management</h4>
                     <p></p>
                 </div>
                 <div className="feature-col">
-                    <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" onMouseOver={handleMouseOver}>
                         <img src="/Data report.gif" className="img-fluid" alt="" />
                     </div>
                     <h4>Track your sales</h4>
                     <p></p>
                 </div>
                 <div className="feature-col">
-                    <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" onMouseOver={handleMouseOver}>
                         <img src="/Street Food.gif" className="img-fluid" alt="" />
                     </div>
                     <h4>SME Friendly</h4>
