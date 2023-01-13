@@ -1,9 +1,15 @@
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-const Navigation = () => {
+const Navigation = (props: any) => {
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+        const target = event.target as HTMLAnchorElement;
+        props.handleComponent(target.innerHTML.toLowerCase())
+
+    }
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -11,8 +17,8 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Login</Nav.Link>
+                        <Nav.Link href="#home" onClick={handleClick}>Home</Nav.Link>
+                        <Nav.Link href="#link" onClick={handleClick}>Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
