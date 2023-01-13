@@ -13,7 +13,12 @@ font-family: 'Nunito', sans-serif; */
  .navbar-nav>a {
    font-family: 'Nunito', sans-serif;
  }
- h1,
+ h1 {
+   font-family: 'Alfa Slab One', cursive;
+ }
+
+ h2,
+ h3,
  button {
    font-family: 'Nunito', sans-serif;
  }
