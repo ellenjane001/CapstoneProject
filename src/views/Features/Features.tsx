@@ -8,7 +8,6 @@ const Features = (): JSX.Element => {
     return (
         <div className="container border-top pt-5">
             <h2 className="display-6 pb-2">Perks and Features</h2>
-            <a href="https://storyset.com/online" className="text-dark">Online illustrations by Storyset</a>
             <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 <div className="feature-col">
                     <div className="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3" onMouseOver={handleMouseOver}>
@@ -32,6 +31,10 @@ const Features = (): JSX.Element => {
                     <p></p>
                 </div>
             </div>
+            <div className="pb-3">
+                <a href="https://storyset.com/online" className="text-decoration-underline fst-italic">Online illustrations by Storyset</a>
+            </div>
+
         </div>
     )
 }
